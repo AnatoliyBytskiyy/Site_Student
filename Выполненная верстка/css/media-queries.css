@@ -1,0 +1,366 @@
+@media screen and (min-width: 1300px) and (max-width: 1500px)  {
+	.owl-nav.disabled .owl-next {
+		left: 43%;
+	}
+
+	.student_list .owl-nav.disabled .owl-next {
+		left: 45%;
+	}
+
+	.footer__content {
+		left: 310px;
+	}
+}
+
+@media screen /*and (min-width: 965px) */and (max-width: 992px)  {
+	
+
+	.owl-nav.disabled .owl-next {
+		left: 39%;
+	}
+
+	.student_list .owl-nav.disabled .owl-next {
+		left: 42%;
+	}
+
+	.telephone {
+		position: absolute;
+		top: 50px;
+		right: 130px;
+	}
+
+	.conteiner_justify_content_end50 {
+		position: absolute;
+		right: 65px;
+	}
+
+	.conteiner_space_around {
+		padding: 20px 40px;
+	}
+
+	.guarantees__item img {
+		width: 85px;
+		height: 95px;
+		padding: 0 10px;
+	}
+
+	.guarantees__item p {
+		font-size: 0.6em;
+	}
+
+	.guarantees__item p+p {
+		font-size: 0.5em;
+	}
+
+	.prices__item_text img {
+		width: 5px;
+		height: 3px;
+	}
+
+	.prices__item button {
+		font-size: 0.7em;
+	}
+
+	.screen__autor {
+		margin: 30px 25px;
+	}
+
+	.questionnaire_content {
+		font-size: 0.3em;
+	}
+
+	.questionnaire_text_top {
+		height: 20px;
+	}
+	
+	.questionnaire_text{
+		margin-bottom: 0px;
+		height: 50px;
+	}
+
+	.questionnaire_content {
+		margin-top: 30px;
+	}
+
+	.questionnaire_button {
+		flex-direction: column-reverse;
+		margin-top: 0px;
+	}
+
+	.questionnaire_ref {
+		font-size: 1.7em;
+		margin-bottom: 10px;
+		margin-left: 15px;
+	}
+
+	.questionnaire_info {
+		width: 200px;
+	}
+
+	.questionnaire_form {
+		top: -23px;
+	}
+
+	.questionnaire_blue {
+		width: 103%;
+	}
+
+	.main__conditions {
+		width: 80%;
+	}
+
+	.bl_title_conteiner {
+		width: 80%;
+	}
+
+	.main__conditions_menu > li > a {
+		font-size: 1em;
+	}
+
+	.prices__list {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 768px)  {
+	.footer__content {
+		left: 180px;
+	}
+
+	.owl-nav.disabled .owl-next {
+		left: 36%;
+	}
+
+	.student_list .owl-nav.disabled .owl-next {
+		left: 40%;
+	}
+
+	.picture_man,
+	.picture_man_1,
+	.picture_man_2,
+	.picture_man_3 {
+		display: none;
+	}
+
+	.telephone {
+		right: 100px;
+	}
+
+	.conteiner_justify_content_end50 {
+		right: 0px;
+	}
+
+	.guarantees__item img {
+		width: 60px;
+		height: 50px;
+	}
+
+	.guarantees__item p {
+		font-size: 0.4em;
+	}
+
+	.guarantees__item p+p {
+		font-size: 0.3em;
+	}
+
+	.conteiner_space_around {
+	    margin-bottom: -20px;
+	}
+
+	.marg_bottom50 {
+		margin-bottom: 20px;
+	}
+
+	.main__conditions {
+		width: 90%;
+	}
+
+	.bl_title_conteiner {
+		width: 90%;
+	}
+
+	.main__conditions_menu > li > a {
+		font-size: 0.9em;
+	}
+
+	.main__bg_block {
+	    padding-top: 20px; 
+	    padding-bottom: 20px;
+	}
+
+	.prices__list {
+		width: 90%;
+	}
+
+	.prices__item button {
+		font-size: 0.6em;
+		margin-top: 5px;
+	}
+
+	.prices__item_title {
+		font-size: 0.8em;
+		margin-bottom: 0px;
+	}
+
+	.prices__item_text {
+		font-size: 0.9em;
+		margin-bottom: -10px;
+	}
+
+	.prices__item_terms {
+		font-size: 0.7em;
+		margin-bottom: -5px;
+	}
+
+	.student__info_user {
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: -5px;
+	}
+
+	.info_user__foto {
+		width: 50%;
+		margin-top: -10px;
+		margin-bottom: 5px;
+		margin-left: 25px;
+	}
+
+	.info_user__name {
+		margin-bottom: 0px;
+	}
+
+	.student__user_coment {
+		font-size: 0.5em;
+	}
+
+	.questionnaire_form {
+		right: -100px;
+	}
+
+	.questionnaire_black {
+		right: 50px;
+	}
+
+	/*.footer__content {
+		left: 190px;
+	}*/
+}
+
+@media screen and (max-width: 576px)  {
+	.owl-nav.disabled .owl-next {
+		left: 32%;
+	}
+
+	.student_list .owl-nav.disabled .owl-next {
+		left: 38%;
+	}
+
+	.conteiner_justify_content_end50 > button {
+		font-size: 0.4em;
+		height: 20px;
+	}
+
+	.conteiner_justify_content_end50 {
+		top: 10px;
+		right: -10px;
+	}
+
+	.telephone {
+		top: 40px;
+		right: 50px;
+	}
+
+	.conteiner_space_around {
+		padding-left: 30px;
+	}
+
+	.guarantees__item img {
+		padding-right: 15px;
+		padding-left: 0px;
+	}
+
+	.guarantees__item p {
+		font-size: 0.3em;
+	}
+
+	.guarantees__item p+p {
+		font-size: 0.3em;
+	}
+
+	.main__conditions_menu {
+		flex-wrap: wrap;
+  		align-content: flex-start;
+	}
+
+	.main__conditions_text {
+		padding-top: 10px;
+	}
+
+	.prices__item_text img {
+		width: 3px;
+		height: 3px;
+	}
+
+	.prices__item button {
+		font-size: 0.5em;
+	}
+
+	.prices__item_title {
+		font-size: 0.5em;
+	}
+
+	.prices__item_terms {
+		font-size: 0.5em;
+	}
+
+	.conteiner__content_center {
+		font-size: 0.4em;
+		margin-left: 10px;
+	}
+
+	.info_user__foto {
+		margin-left: 17px;
+	}
+
+	.student__user_coment {
+		font-size: 0.4em;
+	}
+
+	.block_item_pointer {
+		width: 30%;
+		height: 15px;
+		position: relative;
+		top: 9px;
+	}
+
+	.questionnaire_form {
+		right: -150px;
+	}
+
+	.questionnaire_black {
+		right: 70px;
+	}
+
+	.questionnaire_text {
+		font-size: 0.8em;
+		margin-left: 19px;
+	}
+
+	.questionnaire_button {
+		position: relative;
+		top: -5px;
+	}
+
+	.questionnaire_content {
+		margin-left: 10px;
+	}
+
+	.questionnaire_info {
+		width: 185px;
+	}
+
+	.footer__content {
+		/*width: 60%;*/
+		left: 140px;
+	}
+}

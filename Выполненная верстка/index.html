@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>STUDY HELP</title>
+		<meta charset="utf-8">
+		<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!--Подключаем bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<!--Подключаем font-awesome-->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!--Подключаем стили-->
+		<!-- <link rel="stylesheet" href="css/Carusel/owl.carousel.css"> -->
+
+		<link rel="stylesheet" href="css/Carusel/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/Carusel/owl.theme.default.min.css">
+
+		
+		<link rel="stylesheet" href="css/animate.css">
+  		<link rel="stylesheet" href="css/style.css">
+
+  		<link type="text/css" href="libs\jquery-ui-1.12.1.custom\jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+  		<link rel="stylesheet" href="css/media-queries.css">
+
+  		<script src="js/push_menu/modernizr.custom.js"></script>
+	</head>
+	<body class="cbp-spmenu-push">
+		<div class="modal fade" id="price_work" tabindex="-1" role="dialog" aria-labelledby="price_Label" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="price_Label">New message</h5>
+				</div>
+					<div class="modal-body">
+						<form id="order_form_place">
+							<div class="big-form-group">
+								<div class="form-group">
+									<label for="recipient-name" class="col-form-label">Имя*</label>
+									<input type="text" class="form-control" id="recipient-name" placeholder="Ваше имя" form="order_form_place">
+								</div>
+								<div class="form-group">
+									<label for="recipient-telephone" class="col-form-label">Телефон*</label>
+									<input type="text" class="form-control" form="order_form_place" id="recipient-telephone" placeholder="+38 (___) __-__-___">
+								</div>
+							</div>
+							<div class="big-form-group">
+								<div class="form-group">
+									<label for="recipient-email" class="col-form-label">Почта*</label>
+									<input type="text" class="form-control" id="recipient-email" form="order_form_place" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label for="recipient-university" class="col-form-label">ВУЗ</label>
+									<input type="text" form="order_form_place" class="form-control" id="recipient-university">
+								</div>
+							</div>
+							<div class="big-form-group">
+								<div class="form-group">
+									<label for="recipient-type-work" class="col-form-label">Тип работы</label>
+									<select name="nubexSelect" size="1" form="order_form_place" id="recipient-type-work">
+										<option>Курсовая</option>
+										<option>Реферат</option>
+										<option>Дипломная</option>
+										<option>Магистерская</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="recipient-type-work" class="col-form-label">Предмет*</label>
+									<select name="nubexSelect" size="1" form="order_form_place" id="recipient-type-work">
+										<option>Предмет 1</option>
+										<option>Предмет 2</option>
+										<option>Предмет 3</option>
+										<option>Предмет 4</option>
+									</select>
+								</div>
+							</div>
+							<div class="big-form-group">
+								<div class="form-group">
+									<label for="recipient-them-work" class="col-form-label">Тема работы*</label>
+									<input type="text" class="form-control" id="recipient-them-work" form="order_form_place" placeholder="Тема работы">
+								</div>
+								<div class="form-group">
+									<label for="recipient-bulk" class="col-form-label">Объем страниц*</label>
+									<input id="recipient-bulk" type="number" class="form-control" aria-required="true" aria-invalid="false">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="recipient-term-work" class="col-form-label">Срок сдачи*</label>
+								<input type="text" class="form-control" id="recipient-term-work" form="order_form_place">
+							</div>
+							<label class="download_file">
+								<span class="download_input">
+									<input type="file" name="file-475" size="40" class="" accept=".txt,.doc,.docx,.rar,.zip" aria-invalid="false" form="order_form_place">
+								</span>
+								<span class="file__ob__text">Загрузите файл doc,docx,txt</span>
+								<span class="file__ob__img">
+									<i class="fa fa-paperclip" aria-hidden="true"></i>
+								</span>
+							</label>
+							<div class="form-group">
+								<label for="recipient-term-work" class="col-form-label">Краткое описание</label>
+								<textarea name="comment" cols="40" rows="2" placeholder="Укажите тему работы, требования к оформлению и предлагаемые сроки сдачи работы" form="order_form_place"></textarea>
+							</div>
+							<div class="recipient-sub-btn">
+								<button type="submit" class="btn btn-primary button_blue" form="order_form_place">ОТПРАВИТЬ ДАННЫЕ </button>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						
+						<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+						
+					</div>
+				</div>
+			</div>
+			<button class="c-hamburger c-hamburger--htx btn btn-secondary" data-dismiss="modal">
+				<span></span>							
+			</button>
+		</div>
+		<div class="conteiner">
+			<header class="marg_bottom50">
+				<div class="bg_header">
+					<img src="img/shape.png" class="shape">
+					<div class="conteiner_space_between100 z">	
+						<div class="conteiner_inline_flex50">
+							<nav class="cbp-spmenu cbp-spmenu-left" id="pushMenu">
+								<div class="push_menu__item push_menu__left">
+									<div class="dash_black_empty"></div>
+									<h3>РАЗДЕЛЫ</h3>
+									<ul class="push_menu__left_partition">
+										<li>ГАРАНТИИ</li>
+										<li>УСЛОВИЯ РАБОТЫ</li>
+										<li>ЦЕНЫ</li>
+										<li>ЗАКАЗАТЬ РАБОТУ</li>
+										<li>ОТЗЫВЫ</li>
+										<li>ДЛЯ АВТОРОВ</li>
+										<li>КАК ОПЛАТИТЬ</li>
+										<li>УСЛОВИЯ СОТРУДНИЧЕСТВА</li>
+										<li>КОНТАКТЫ</li>
+									</ul>
+								</div>
+								<div class="push_menu__item push_menu__center">
+									<div class="dash_black_empty"></div>
+									<h3>РАЗДЕЛЫ</h3>
+									
+								</div>
+								<div class="push_menu__item push_menu__right">
+									<a href="#" class="home_link">На главную</a>
+									<div class="dash_black_empty"></div>
+									<h3>ПИШЕМ РАБОТЫ ЛЮБОЙ СЛОЖНОСТИ. ПРИГЛАШАЕМ АВТОРОВ</h3>
+
+									<button class="c-hamburger c-hamburger--htx" id="hideLeftPush">
+										<span></span>							
+									</button>
+								</div>
+								
+							</nav>	
+							<div class="menu menu_position" id="showLeftPush">
+								<p>меню</p>
+							    <div class="menu__icon">
+									<span></span>
+									<span></span>
+									<span></span>
+							    </div>
+							</div>	
+							<p class="study_helper"><span class="study">STUDY<span class="help">HELP</span></span></p> 
+						</div>
+						<div class="conteiner_justify_content_end50">
+							<p class="telephone"><span class="telephone_numb_cod">+38 (066) </span><span class="telephone_numb">599-17-32</span></p>
+							<button class="button_white button_pos" data-toggle="modal" data-target="#price_work" data-whatever="Заказать работу">ЗАКАЗАТЬ РАБОТУ</button> 
+							<button class="button_white" data-toggle="modal" data-target="#price_work" data-whatever="Для Авторов">ДЛЯ АВТОРОВ</button>
+						</div>	
+					</div>
+					<img src="img/present.png" class="header__present">
+					<div class="conteiner_screen z">
+						<img src="img/img_man.png" class="picture_man picture_man_1">
+						<div class="header__screen">
+							<div class="screen__carousel_w wow zoomIn">
+								<div class="screen__carousel_b">
+									<div id="demo" class="carousel slide" data-ride="carousel">
+										<div class="carousel-inner">
+											<div class="carousel-item active">	
+												<p>
+													<span class="text_top">
+														НА КАЖДУЮ<br>
+													</span>
+													<span class="text_middle">	
+														ПОСЛЕДУЮЩУЮ<br>
+														РАБОТУ ВЫ ПОЛУЧИТЕ<br>
+													</span>
+													<span class="text_bottom">
+														СКИДКУ +1%
+													</span>	
+												</p>	
+											</div>
+											<div class="carousel-item">
+												<p>
+													<span class="text_top2">
+														ДОВЕРЬТЕ<br>
+													</span>
+													<span class="text_middle2">	
+														НАМ ВАШИ<br>
+													</span>
+													<span class="text_bottom2">
+														контрольные, дипломы, <br>
+														курсовые работы, <br>
+														рефераты, эссе <br>
+														отчеты по практике
+													</span>	
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="block1 bg_block_1"></div>
+								</div>		
+								<div class="block2 bg_block_1">
+									<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Узнать стоимость работы">УЗНАТЬ СТОИМОСТЬ РАБОТЫ</button>	
+								</div>
+							</div>
+							<div class="screen__advantages_row">
+								<div class="advantages wow zoomIn"> <!-- zoomIn -->
+									<img src="img/ico-1.png">
+									<br><p><span class="advantage_text">2200 авторов</span class="advantage_text"></p>
+									<p>за плечами которых</p>
+								</div>
+								<div class="advantages wow zoomIn"> <!-- zoomIn -->
+									<img src="img/ico-2.png">
+									<br><p><span class="advantage_text">1 128 968</span class="advantage_text"></p>
+									<p>выполненных<br> работ</p>
+								</div>
+								<div class="advantages wow zoomIn"> <!-- zoomIn -->
+									<img src="img/ico-3.png">
+									<p>со средним<br> баллом <span class="advantage_text">4,8</span class="advantage_text"></p>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+				<a href="#"><button class="scroll_top"></button></a>       <!--  &#710; -->
+			</header>
+			<main>
+				<div class="bl_title_conteiner">
+					<p>КАКИЕ МЫ ДАЕМ ГАРАНИТИИ?</p>
+				</div>
+				<div class="conteiner_space_between100">
+					<div class="half_line_title"></div>
+					<div class="half_line_title"></div>
+				</div>
+				<div class="owl-carousel guarantees__list"  id="carudel_guarantees">    
+					<div class="guarantees__item">
+						<img src="img/ico-4.png"><br>
+						<p><b><big>КОНФИДЕНЦИАЛЬНОСТЬ<br> ВАШИХ ДАННЫХ</big></b></p>
+						<p>Aenean massa. Cum sociis na&shy;toque penatibus et magnis dis par&shy;turient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesqu</p>
+					</div>
+					<div class="guarantees__item">
+						<img src="img/ico-5.png"><br>
+						<p><b><big>КОНФИДЕНЦИАЛЬНОСТЬ<br> ВАШИХ ДАННЫХ</big></b></p>
+						<p>Aenean massa. Cum sociis na&shy;toque penatibus et magnis dis par&shy;turient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesqu</p>
+					</div>
+					<div class="guarantees__item">
+						<img src="img/ico-6.png"><br>
+						<p><b><big>КОНФИДЕНЦИАЛЬНОСТЬ<br> ВАШИХ ДАННЫХ</big></b></p>
+						<p>Aenean massa. Cum sociis na&shy;toque penatibus et magnis dis par&shy;turient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesqu</p>
+					</div>
+					<div class="guarantees__item">
+						<img src="img/ico-7.png"><br>
+						<p><b><big>КОНФИДЕНЦИАЛЬНОСТЬ<br> ВАШИХ ДАННЫХ</big></b></p>
+						<p>Aenean massa. Cum sociis na&shy;toque penatibus et magnis dis par&shy;turient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesqu</p>
+					</div>
+					<div class="guarantees__item">
+						<img src="img/ico-8.png"><br>
+						<p><b><big>КОНФИДЕНЦИАЛЬНОСТЬ<br> ВАШИХ ДАННЫХ</big></b></p>
+						<p>Aenean massa. Cum sociis na&shy;toque penatibus et magnis dis par&shy;turient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesqu</p>
+					</div>
+					<div class="guarantees__item">
+						<img src="img/ico-9.png"><br>
+						<p><b><big>КОНФИДЕНЦИАЛЬНОСТЬ<br> ВАШИХ ДАННЫХ</big></b></p>
+						<p>Aenean massa. Cum sociis na&shy;toque penatibus et magnis dis par&shy;turient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesqu</p>
+					</div>
+				</div>
+				<div class="block_list">
+					<div class="block_item"></div>
+					<div class="block_item_pointer"></div>  
+					<div class="block_item"></div>
+				</div>
+				<div class="bl_title_conteiner"> 
+					<p>УСЛОВИЯ РАБОТЫ НАШЕЙ КОМПАНИИ</p>
+				</div>
+				<div class="main__conditions">
+					<div class="container mt-3">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#home">ПРЕДОПЛАТА<i class="fa fa-angle-double-right"></i></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#menu1">НАЧАЛО РАБОТЫ<i class="fa fa-angle-double-right"></i></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#menu2">ВЫПОЛНЕНИЕ<i class="fa fa-angle-double-right"></i></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#menu3">100% ОПЛАТА<i class="fa fa-angle-double-right"></i></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#menu4">ОТПРАВКА ЗАКАЗА<i class="fa fa-angle-double-right"></i></a>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div id="home" class="container tab-pane active"><br>
+								<div class="main__conditions_text">
+									<h6>ПРЕДОПЛАТА</h6>
+									<p>Вы осуществляете предоплату в размере 50% от стоимости заказа, что является своего рода гарантией от Вас. В случае вашего отказа, предоплата не возвращается. Форма оплаты обговаривается с менеджером.</p>
+								</div>
+								<img src="img/ico.png" class="main__conditions_img">
+							</div>
+							<div id="menu1" class="container tab-pane fade"><br>
+								<div class="main__conditions_text">
+									<h6>НАЧАЛО РАБОТЫ</h6>
+									<p>После получения предоплаты наши специалисты начинают выполнение заказа. И с этого момента мы несем перед вами ответственность за выполнение работы.</p>
+								</div>
+								<img src="img/ico.png" class="main__conditions_img">
+							</div>
+							<div id="menu2" class="container tab-pane fade"><br>
+								<div class="main__conditions_text">
+									<h6>ВЫПОЛНЕНИЕ</h6>
+									<p>Ваш персональный менеджер контролирует ход выполнения работы автором, координирует сроки, вносит коррективы, если возникает такая необходимость в соответствии с вашими пожеланиями. Также менеджер обязан предоставлять Вам отчет о проделанной работе на любой момент времени по вашему требованию.</p>
+								</div>
+								<img src="img/ico.png" class="main__conditions_img">
+							</div>
+							<div id="menu3" class="container tab-pane fade"><br>
+								<div class="main__conditions_text">
+									<h6>100% ОПЛАТА</h6>
+									<p>После проверки части выполненной работы ( около 50%), Вы производите оплату оставшейся суммы, в том случае, если Вас все устраивает. Форма оплаты обговаривается с менеджером.</p>
+								</div>
+								<img src="img/ico.png" class="main__conditions_img">
+							</div>
+							<div id="menu4" class="container tab-pane fade"><br>
+								<div class="main__conditions_text">
+									<h6>ОТПРАВКА ЗАКАЗА</h6>
+									<p>После получения 100% оплаты, мы предоставляем Вам выполненную работу в любом удобном Вам виде (напечатанную или электронную) любым удобным вам способом –лично в руки, через электронную почту, социальные сети или используя другие интернет ресурсы.</p>
+								</div>
+								<img src="img/ico.png" class="main__conditions_img">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__bg_block">
+					<div class="bl_title_conteiner">
+						<p>ЦЕНЫ НА НАШИ УСЛУГИ</p>
+					</div>
+					<div class="conteiner_space_between100">
+						<div class="half_line_title"></div>
+						<div class="half_line_title"></div>
+					</div>
+					<div class="prices__list">
+						<div class="prices__item item_style_blue">
+							<p class="prices__item_title">КОНТРОЛЬНЫЕ</p> 
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Теоретическая контрольная</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Практическая контрольная</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Контрольная по техническим дисциплинам</p>
+							</div>
+							<pre class="prices__item_terms"><b>Сроки:</b>   от <big>2</big> дней</pre>
+							<div class="conteiner__content_center">
+								<p class="item_prace_txt">от</p>
+								<p class="item_prace_numb">80 руб.</p>
+							</div>
+							<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Заказать работу">ЗАКАЗАТЬ РАБОТУ</button>
+						</div>
+						<div class="prices__item item_style_standart">
+							<p class="prices__item_title">РЕФЕРАТЫ</p> 
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Теоретический реферат</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Практический реферат</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Рефераты по техническим дисциплинам</p>
+							</div>
+							<pre class="prices__item_terms"><b>Сроки:</b>   от <big>2</big> дней</pre>
+							<div class="conteiner__content_center">
+								<p class="item_prace_txt">от</p>
+								<p class="item_prace_numb">70 руб.</p>
+							</div>
+							<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Заказать работу">ЗАКАЗАТЬ РАБОТУ</button>
+						</div>
+						<div class="prices__item item_style_standart">
+							<p class="prices__item_title">ДИПЛОМНЫЕ</p> 
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Выполнение реферата</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Выполнение контрольной</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Контрольная по техническим дисциплинам</p>
+							</div>
+							<pre class="prices__item_terms"><b>Сроки:</b>   от <big>5</big> дней</pre>
+							<div class="conteiner__content_center">
+								<p class="item_prace_txt">от</p>
+								<p class="item_prace_numb">3 000 руб.</p>
+							</div>
+							<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Заказать работу">ЗАКАЗАТЬ РАБОТУ</button>
+						</div>
+						<div class="prices__item item_style_standart">
+							<p class="prices__item_title">МАГИСТЕРСКИЕ</p> 
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Выполнение реферата</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Выполнение контрольной</p>
+							</div>
+							<div class="prices__item_text">
+								<img src="img/check.png">
+								<p>Контрольная по техническим дисциплинам</p>
+							</div>
+							<pre class="prices__item_terms"><b>Сроки:</b>   от <big>5</big> дней</pre>
+							<div class="conteiner__content_center">
+								<p class="item_prace_txt">от</p>
+								<p class="item_prace_numb">3 000 руб.</p>
+							</div>
+							<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Заказать работу">ЗАКАЗАТЬ РАБОТУ</button>
+						</div>
+					</div>
+					<div class="bl_title_conteiner">
+						<p>ОТЗЫВЫ НАШИХ СТУДЕНТОВ</p>
+					</div>
+					<div class="conteiner_space_between100">
+						<div class="half_line_title"></div>
+						<div class="half_line_title"></div>
+					</div>
+					<div class="owl-carousel student_list" id="carudel_reviews">  
+						<div class="student_item">
+							<div class="student__info_user">
+								<img src="img/ico_user.png" class="info_user__foto">
+								<div class="info_user__i">
+									<p class="info_user__name">ОЛЬГА</p>
+									<p><b>Творческая работа</b></p>
+									<p>Задание по психилогии</p>
+								</div>
+							</div>
+							<div class="student__user_coment">
+								<p>Большое спасибо автору за проделанную работу, все сделанно по заданию, грамотно, в срок. Очень выручил!!Так что советую, не бойтесь, заказывайте ваши работы. Будут на отлично</p>
+							</div>
+							<div class="student__data">13.05.2017</div>
+						</div>
+						<div class="student_item">
+							<div class="student__info_user">
+								<img src="img/ico_user.png" class="info_user__foto">
+								<div class="info_user__i">
+									<p class="info_user__name">ОЛЬГА</p>
+									<p><b>Творческая работа</b></p>
+									<p>Задание по психилогии</p>
+								</div>
+							</div>
+							<div class="student__user_coment">
+								<p>Обратилась в studyhelp с проблемой. До сдачи дипломной работы оставались считанные дни, а человек, который обещал ее написать,работу не выполнил, и вообще потерялся! Спасибо, studyhelp помогли! Работа  была выполнена быстро и качественно. А главное – с  гарантией!</p>
+							</div>
+							<div class="student__data">13.05.2017</div>
+						</div>
+						<div class="student_item">
+							<div class="student__info_user">
+								<img src="img/ico_user.png" class="info_user__foto">
+								<div class="info_user__i">
+									<p class="info_user__name">ОЛЬГА</p>
+									<p><b>Творческая работа</b></p>
+									<p>Задание по психилогии</p>
+								</div>
+							</div>
+							<div class="student__user_coment">
+								<p>Большое спасибо автору за проделанную работу, все сделанно по заданию, грамотно, в срок. Очень выручил!!Так что советую, не бойтесь, заказывайте ваши работы. Будут на отлично</p>
+							</div>
+							<div class="student__data">13.05.2017</div>
+						</div>
+						<div class="student_item">
+							<div class="student__info_user">
+								<img src="img/ico_user.png" class="info_user__foto">
+								<div class="info_user__i">
+									<p class="info_user__name">ОЛЬГА</p>
+									<p><b>Творческая работа</b></p>
+									<p>Задание по психилогии</p>
+								</div>
+							</div>
+							<div class="student__user_coment">
+								<p>Большое спасибо автору за проделанную работу, все сделанно по заданию, грамотно, в срок. Очень выручил!!Так что советую, не бойтесь, заказывайте ваши работы. Будут на отлично</p>
+							</div>
+							<div class="student__data">13.05.2017</div>
+						</div>
+						<div class="student_item">
+							<div class="student__info_user">
+								<img src="img/ico_user.png" class="info_user__foto">
+								<div class="info_user__i">
+									<p class="info_user__name">ОЛЬГА</p>
+									<p><b>Творческая работа</b></p>
+									<p>Задание по психилогии</p>
+								</div>
+							</div>
+							<div class="student__user_coment">
+								<p>Большое спасибо автору за проделанную работу, все сделанно по заданию, грамотно, в срок. Очень выручил!!Так что советую, не бойтесь, заказывайте ваши работы. Будут на отлично</p>
+							</div>
+							<div class="student__data">13.05.2017</div>
+						</div>
+					</div>
+					<div class="block_list">
+						<div class="block_item"></div>
+						<div class="block_item_pointer"></div>  
+						<div class="block_item"></div>
+					</div>
+					</div>
+				</div>
+				<div class="bg_header padd bg_transform">	
+					<img src="img/shape.png" class="shape">  
+					<div class="conteiner_screen z">
+						<img src="img/img_man_2.png" class="picture_man picture_man_2">
+						<div class="header__screen height">
+							<div class="screen__carousel_w wow zoomIn"> 
+								<div class="screen__carousel_b">
+									<div class="bg_transform screen__order">
+										<p>
+											<span class="text_top3">
+												ЗАКАЖИ<br>
+											</span>
+											<span class="text_middle3">	
+												СВОЮ РАБОТУ<br>
+											</span>
+											<span class="text_bottom3">
+												ЗАПОЛНИ АНКЕТУ И УЗНАЙ СТОИМОСТЬ И СРОКИ<br>
+												СВОЕЙ РАБОТЫ. ЭТО ЗАЙМЕТ У ВАС 30 СЕКУНД,<br>
+												ОТВЕТЬТЕ ПОЖАЛУЙСТА НА ВСЕ ВОПРОСЫ И МЫ<br>
+												СВЯЖЕМСЯ С ВАМИ В КРАТЧАЙШИЕ СРОКИ
+											</span>	
+										</p>
+									</div>
+									<div class="block1 bg_block_1"></div>
+								</div>	
+								<div class="block2 bg_block_1">
+									<button class="button_red bg_transform" data-toggle="modal" data-target="#price_work" data-whatever="Узнать стоимость работы">УЗНАТЬ СТОИМОСТЬ РАБОТЫ</button>
+								</div>
+							</div>
+							<div class="screen__order_row bg_transform wow zoomIn">
+								<p><span class="or">или</span> оставь данные и мы вам позвоним</p>
+							</div> 
+							<form action="#" id="order" method="post" class="bg_transform order_form wow zoomIn"> <!-- zoomIn -->
+								<p><input type="text" placeholder="Ваше имя" name="user" form="order">
+								<input type="text" placeholder="Ваш телефон" name="tel" id="phone" form="order"></p>
+								<p><input type="submit" form="order"></p>
+							</form>
+						</div>
+					</div>	
+				</div>
+				<div class="conteiner_screen padd2">
+					<img src="img/img_man_3.png" class="picture_man picture_man_3">
+					<div class="header__screen">
+						<div class="screen__carousel_w screen__carousel_blu wow zoomIn">
+							<div class="screen__carousel_b">
+								<div class="screen__autor">
+									<p>
+										<span class="text_top4">
+											РАБОТА ДЛЯ АВТОРОВ<br>
+										</span>
+										<span class="text_bottom4">
+											У НАС ВЫГОДНЫЕ УСЛОВИЯ: ЗАКАЗЫ КРУГЛЫЙ ГОД<br>
+											СВОБОДНЫЙ ГРАФИК, РЕГУЛЯРНЫЕ ВЫПЛАТЫ<br>
+										</span>	
+										<span class="text_top4">
+											КАК СТАТЬ АВТОРОМ?<br>
+										</span>
+										<span class="text_bottom4">
+											ЗАПОЛНИ АНКЕТУ. ЭТО ЗАЙМЕТ У ВАС 30 СЕКУНД,<br>
+											ОТВЕТЬТЕ ПОЖАЛУЙСТА НА ВСЕ ВОПРОСЫ И МЫ <br>
+											СВЯЖЕМСЯ С ВАМИ В КРАТЧАЙШИЕ СРОКИ
+										</span>
+									</p>
+								</div>						
+								<div class="block1 bg_block_2"></div>
+							</div>		
+							<div class="block2 bg_block_2">
+								<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Заполнить анкету">ЗАПОЛНИТЬ АНКЕТУ</button>
+							</div>
+						</div>
+						<div class="screen__advantages_row">
+							
+						</div> 
+					</div>
+				</div>
+				<div class="questionnaire_conteiner">	
+					<div class="questionnaire_black">
+						<div class="questionnaire_blue">
+							<div class="questionnaire_content">
+								<p class="questionnaire_text"><sapan class="questionnaire_text_top">У НАС УЖЕ ЕСТЬ</sapan>
+								<sapan class="questionnaire_text_bottom">ГОТОВЫЕ РАБОТЫ!</sapan></p>
+								<div class="questionnaire_button">
+									<button class="button_red" data-toggle="modal" data-target="#price_work" data-whatever="Заполнить анкету">ЗАПОЛНИТЕ АНКЕТУ</button>
+									<div class="questionnaire_ref">
+										<a href="#">НЕ НАШЛИ ВИД РАБОТЫ</a>
+										<a href="#">КОТОРЫЙ НУЖЕН ВАМ?</a>
+									</div>
+								</div>
+								<div class="questionnaire_info">
+									<p>заполните анкету, мы делаем задания любой сложности и рода деятельности!</p>
+								</div>
+							</div>
+						</div>
+						<div class="questionnaire_form">
+							<p>ПОМОЖЕМ</p>
+							<p>С ЛЮБОЙ РАБОТОЙ</p>
+							<form action="#" id="questionnaire_order" method="post" class="question_order"> 
+								<input type="text" placeholder="Ваше имя" name="user" form="questionnaire_order">
+								<input type="text" placeholder="Ваш телефон" name="tel" id="phone2" form="questionnaire_order">
+								<textarea name="comment" cols="40" rows="6" placeholder="Сообщение или тема вопроса" form="questionnaire_order"></textarea>
+								<input value="ЗАКАЗАТЬ ЗВОНОК" type="submit" form="questionnaire_order">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="bl_title_conteiner">
+					<p>ПОДРОБНО О ВСЕХ ВОПРОСАХ</p>
+				</div>
+				<div class="conteiner_space_between100">
+					<div class="half_line_title"></div>
+					<div class="half_line_title"></div>
+				</div>
+				<div class="container_accordion">
+					<ul id="accordion">
+				    	<li class="card card-link faq__item" data-toggle="collapse" data-target="#collapseOne">
+				    		<div class="card-header faq__item__conteiner">
+				    			В КАКОМ ВИДЕ ВЫ ПРИШЛЕТЕ РАБОТЫ?
+								<div class="faq__item_arrow"></div>
+				      		</div>
+				    		<div id="collapseOne" class="collapse" data-parent="#accordion">
+				        		<div class="card-body faq__info_box top">
+									orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
+				        		</div>
+				    		</div>
+				    	</li>
+				    	<li class="card card-link faq__item" data-toggle="collapse" data-target="#collapseTwo">
+				    		<div class="card-header faq__item__conteiner">
+				    			В КАКОМ ВИДЕ ВЫ ПРИШЛЕТЕ РАБОТЫ?
+								<div class="faq__item_arrow"></div>
+				      		</div>
+				    		<div id="collapseTwo" class="collapse" data-parent="#accordion">
+				        		<div class="card-body faq__info_box top">
+									orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
+				        		</div>
+				    		</div>
+				    	</li>
+				    	<li class="card card-link faq__item" data-toggle="collapse" data-target="#collapseThree">
+				    		<div class="card-header faq__item__conteiner">
+				    			В КАКОМ ВИДЕ ВЫ ПРИШЛЕТЕ РАБОТЫ?
+								<div class="faq__item_arrow"></div>
+				      		</div>
+				    		<div id="collapseThree" class="collapse" data-parent="#accordion">
+				        		<div class="card-body faq__info_box top">
+									orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
+				        		</div>
+				    		</div>
+				    	</li>
+				    	<li class="card card-link faq__item" data-toggle="collapse" data-target="#collapseFour">
+				    		<div class="card-header faq__item__conteiner">
+				    			В КАКОМ ВИДЕ ВЫ ПРИШЛЕТЕ РАБОТЫ?
+								<div class="faq__item_arrow"></div>
+				      		</div>
+				    		<div id="collapseFour" class="collapse" data-parent="#accordion">
+				        		<div class="card-body faq__info_box top">
+									orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
+				        		</div>
+				    		</div>
+				    	</li>
+				    	<li class="card card-link faq__item" data-toggle="collapse" data-target="#collapseFive">
+				    		<div class="card-header faq__item__conteiner">
+				    			В КАКОМ ВИДЕ ВЫ ПРИШЛЕТЕ РАБОТЫ?
+								<div class="faq__item_arrow"></div>
+				      		</div>
+				    		<div id="collapseFive" class="collapse" data-parent="#accordion">
+				        		<div class="card-body faq__info_box top">
+									orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
+				        		</div>
+				    		</div>
+				    	</li>
+				    	<li class="card card-link faq__item" data-toggle="collapse" data-target="#collapseSix">
+				    		<div class="card-header faq__item__conteiner">
+				    			В КАКОМ ВИДЕ ВЫ ПРИШЛЕТЕ РАБОТЫ?
+								<div class="faq__item_arrow"></div>
+				      		</div>
+				    		<div id="collapseSix" class="collapse" data-parent="#accordion">
+				        		<div class="card-body faq__info_box top">
+									orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero
+				        		</div>
+				    		</div>
+				    	</li>
+					</ul>
+				</div>
+			</main>
+			<footer>
+				<div id="map"></div>
+				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12091.09944865216!2d-73.99550575096596!3d40.7449792306924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1527078570312"  frameborder="0" allowfullscreen></iframe> -->
+				<div class="footer__content">
+					<div class="border_blue">
+						<div class="border_black">
+							<div class="content">
+								<h5>КОНТАКТЫ</h5><br>
+								<p>АДРЕС:<br>г.Донецк, ул. Челюскинцев 184 А<br><br>
+								   ТЕЛЕФОН:<br>+38 (066) 599-17-32,&nbsp; &nbsp; &nbsp; +38 (078) 599-17-32<br><br>
+								   ЕМАЙЛ:<br>studyhelp.dn@gmail.com<br><br>
+								   ВРЕМЯ РАБОТЫ:<br>ПН-ВС С 10:00 до 20:00</p>
+								<div class="social_networks">
+									<div class="social_item">
+										<a href="https://www.facebook.com" class="social_link">
+											<div class="social_view social_ref"></div>
+											<i class="fa fa-facebook social_icon f"></i>
+											<div class="social_view social_bg"></div>
+										</a>
+									</div>
+									<div class="social_item">
+										<a href="https://www.vk.com" class="social_link">
+											<div class="social_view social_ref"></div>
+											<i class="fa fa-vk social_icon vk"></i>
+											<div class="social_view social_bg"></div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<p class="nebo">©2017 All rights reserved.   Разработка и продвижение сайтов NEBO</p>
+				</div> 
+			</footer>
+		</div>
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="libs\jquery-ui-1.12.1.custom\jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    	<script type="text/javascript" src="js/jqueryrotate.js"></script>
+
+		<script src="js/wow.js"></script>
+    	<script src="js/jquery.maskedinput.js"></script>
+    	<script src="js/masked_telephone.js"></script>
+    	<!-- <script src="js/nav.js"></script> -->
+    	<script src="js/nav_scroll.js"></script>
+    	<script src="js/main_scroll_back.js"></script>
+    	<script src="js/faq.js"></script>
+    	<script src="js/new.window.js"></script>
+    	<script src="js/animated_page.js"></script>
+    	<!-- <script src="js/work_conditions_menu.js"></script> -->
+
+    	<script src="js/Carusel/message_slider.js"></script>
+    	<script src="js/Carusel/owl.carousel.min.js"></script>
+
+    	<!-- <script src="path/to/anime.min.js"></script> -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+		<script src="js/map.js"></script>
+
+		<script src="js/push_menu/classie.js"></script>
+		<script src="js/push_menu/push-menu.js"></script>	
+		<script src="js/push_menu/navbar-toggle-animation.js"></script>	
+	</body>
+</html>
